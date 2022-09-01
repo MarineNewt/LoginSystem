@@ -21,7 +21,7 @@ login_manager.init_app(app)
 login_manager.login_view = "login"
 
 @login_manager.user_loader
-def laod_user(user_id):
+def load_user(user_id):
     return User.query.get(int(user_id))
 
 class User(db.Model, UserMixin):
@@ -43,6 +43,7 @@ class LoginForm(FlaskForm):
     password =StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Password"})
     submit = SubmitField("Login")
     
+session = ""
 
 @app.route('/')
 def home():
@@ -55,6 +56,8 @@ def login():
         user = User.query.filter_by(username=form.username.data).first()
         if user:
             if bcrypt.check_password_hash(user.password, form.password.data):
+                global session
+                session = form.username.data
                 login_user(user)
                 return redirect(url_for('dashboard'))
     return render_template("login.html", form = form)
@@ -74,7 +77,8 @@ def register():
 @app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
 def dashboard():
-    return render_template('dashboard.html')
+    current = session
+    return render_template('dashboard.html', current = current)
 
 @app.route('/logout', methods=['GET', 'PSOT'])
 @login_required

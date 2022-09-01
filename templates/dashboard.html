@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../static/App.css">
     <title>Dashboard</title>
 </head>
 <body>
+    <ul class="navbar">
+        <li class="navbarele"><a class="navbarelein" href="/">Home</a></li>
+        <li class="navbarele"><a class="navbarelein" href="login">Login</a></li>
+        <li class="navbarele"><a class="navbarelein" href="register">Register</a></li>
+        <li class="navbarele"><a class="navbarelein" href="">About</a></li>
+        <h2 class="navtitle">Login System Framework</h2>
+    </ul>
+    <div class="content">
+
     <h1>Dashboard</h1>
-    <a href="{{url_for('logout')}}">Logout</a>
+    <br>
+    <h2 class="indented">Hello <i>{{ current }}!</i></h2>
+    <button class="button"><a class="buttontext" href="{{url_for('logout')}}">Logout</a></button>
+
+
+    </div>
 </body>
 </html>

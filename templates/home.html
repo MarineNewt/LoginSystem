@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../static/App.css">
     <title>Home</title>
 </head>
 <body>
+    <ul class="navbar">
+        <li class="navbarele"><a class="navbarelein" href="/">Home</a></li>
+        <li class="navbarele"><a class="navbarelein" href="login">Login</a></li>
+        <li class="navbarele"><a class="navbarelein" href="register">Register</a></li>
+        <li class="navbarele"><a class="navbarelein" href="">About</a></li>
+        <h2 class="navtitle">Login System Framework</h2>
+    </ul>
 
-    <h1>Login Authentification system in Flask</h1>
-    
-    <a href="{{url_for('login')}}">Login Page</a> <br>
-    <a href="{{url_for('register')}}">Register</a> <br>
+    <div class="content">
+    <br>
+    <h1>Login Authentification system in Flask</h1> <br>
 
+    <div class="inlines"><p> Login to your account:</p><button class="button"><a class="buttontext" href="{{url_for('login')}}">Login Page</a></button></div><br>
+
+    <div class="inlines"><p> Dont have an account? Click here:</p><button class="button"><a class="buttontext" href="{{url_for('register')}}">Register</a></button></div>
+    </div>
 
 </body>
 </html>

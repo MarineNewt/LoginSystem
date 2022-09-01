@@ -1,0 +1,70 @@
+/* css styling */
+
+.button {
+    background-color: rgb(25, 63, 133);
+    border-color: white;
+    background-size: cover;
+    height: 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+}
+.buttontext {
+    text-decoration: none;
+    color: white;
+}
+
+.inlines {
+    display: flex;
+}
+
+.content{
+    background-image: linear-gradient(rgb(89, 175, 237), rgb(176, 58, 178));
+    margin-top: 0;
+    height: 90vh;
+    padding: 5px;
+}
+
+.indented{
+    margin-left: 5px;
+}
+
+h1 {
+    margin-top: 0;
+    margin-left: 5px;
+}
+
+
+/* navigation bar */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+.navbarele{
+display: inline;
+float: left;
+}
+.navbarelein{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbarelein:hover {
+    background-color: rgb(25, 63, 133);
+}
+.navtitle {
+    float: right;
+    display: block;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin-right: 10px;
+    text-decoration: none;
+}
